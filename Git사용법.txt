@@ -13,6 +13,6 @@ Untraced (추적하지 않는 파일) 이 존재하는 경우, 버전 만들기�
 > git status
 Changes to be committed (커밋할 변경 사항) 으로 변경
 > git commit -m "Message 1"
-Staging Area에 있는 파일을 Repository로 이동
+: Staging Area에 있는 파일을 Repository로 이동
 > git log
-commit history 표시
+: commit history 표시
