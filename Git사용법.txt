@@ -6,13 +6,60 @@
  Staging Area
  Repository
 > git status
-: git의 현재상태
-Untraced (추적하지 않는 파일) 이 존재하는 경우, 버전 만들기가 필요함
+: git의 현재상태 (Working tree status)
+Untracked (추적하지 않는 파일) 이 존재하는 경우, 버전 만들기가 필요함
 > git add 파일명
 : 파일명을 Staging Area에 올림
 > git status
-Changes to be committed (커밋할 변경 사항) 으로 변경
+Changes to be committed (커밋할 변경 사항) 으로 변경:Working
 > git commit -m "Message 1"
-: Staging Area에 있는 파일을 Repository로 이동
+: Staging Area에 있는 파일을 Repository로 이동 (Create Version)
 > git log
-: commit history 표시
+: commit history 표시(Show Version)
+> git log --stat 
+
+3. 버전간의 차이점 비교
+> git diff
+> git log -p
+
+4. checkout
+> git checkout commit_id
+: commit_id 버전으로 돌아감
+> git checkout master
+: 최신 버전으로 돌아감
+
+5. add와 commit을 한번에 수행
+> git commit -am "3"
+<주의> commit 되는 파일은 적어도 한번은 add 가 되어 있어야 함(Untracked 된 파일이 있으면 안됨)
+
+6. git 의 환경설정
+> git config --global core.editor "vim"
+
+7. 버전 삭제하기
+> git reset --hard commit_id
+: commit_id 버전으로 reset 한다
+
+8. 버전 되돌리기
+> git revert commit_id
+<주의> 잘못 수행하면 버전 충돌이 발생함, 항상 최신 버전부터 역순으로 revert 해야 함
+
+9. 버전 제외 대상 지정
+.gitignore 파일 생성 후, 제외 대상 파일을 기입함
+
+10. backup
+push : local Repository에서 remote Repository 로 이동
+clone : remote Repository에서 local Repository로 복사
+pull : remote Repository에서 local Repository로 이동
+
+11. git host 연결
+> git remote add origin https://github.com/nightzoo/welcom.git
+> git remote
+: 원격 저장소 정보
+> git remote -v 
+: 원결 저장소 정보 , URL 첨부
+
+12. 원격 저장소에 push
+> git push --set-upstream origin master
+: 연결된 원격 저장소에 push
+> git push
+: 이후부터는 push 만 사용하면 됨
