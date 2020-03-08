@@ -1,0 +1,9 @@
+1. 저장소 만드는 방법
+> git init
+
+2. 버전 만들기
+ Working tree
+ Staging Area
+ Repository
+> git status
+: git의 현재상태
