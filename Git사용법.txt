@@ -63,3 +63,10 @@ pull : remote Repository에서 local Repository로 이동
 : 연결된 원격 저장소에 push
 > git push
 : 이후부터는 push 만 사용하면 됨
+
+13. 원격 저장소 clone
+> git clone https://github.com/nightzoo/xxxx.git
+: xxxx 폴더가 생성
+
+14. 원격 저장소로 부터  pull
+> git pull
